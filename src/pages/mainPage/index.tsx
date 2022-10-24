@@ -11,7 +11,6 @@ const MainPage: FC = () => {
     useEffect(() => {
         console.log(weather);
     }, [weather])
-
     return (
         <div className='folder'>
             {weather.map((e) => e.list)}
