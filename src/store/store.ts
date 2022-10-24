@@ -1,8 +1,10 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { appReducer } from './modules/app';
+import { weatherReducer } from './modules/weather';
 export const store = configureStore({
     reducer: {
        app: appReducer,
+       weather: weatherReducer, 
     }, middleware(getDefaultMiddleware) {
         return getDefaultMiddleware({ serializableCheck: false });
       },

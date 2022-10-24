@@ -1,5 +1,5 @@
 import { AxiosPromise } from "axios"
-import { weatherModel } from "../../store/modules/app/weather"
+import { weatherModel } from  "../../app/models/weather"
 
 export interface getWeatherModel{
     
