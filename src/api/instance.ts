@@ -3,10 +3,9 @@ import axios from 'axios';
 const getBaseUrl = () => {
   switch (window.location.hostname) {
     default:
-      return 'http://api.openweathermap.org/data/2.5/forecast?lat=40&lon=40&appid=530d4e8348e4adc2839e9c6aa4a74d1b';
+      return 'https://api.openweathermap.org/data/2.5/forecast?lat=41&lon=69&appid=efa9b2c365ff6d768ba4a6bc188cdff2&units=metric&cnt=5';
   }
 };
-
 const instance = axios.create({
   baseURL: getBaseUrl(),
   headers: {
