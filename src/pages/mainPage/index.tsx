@@ -14,7 +14,7 @@ const MainPage: FC = () => {
     return (
         <div className='folder'>
             {weather.map((e) => e.list)}
-            кама хуйло
+            Main Page
         </div>
     )
 }
