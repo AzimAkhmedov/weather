@@ -5,9 +5,9 @@ import { weatherModel } from '../../app/models/weather'
 import './style.scss'
 const MainPage: FC = () => {
     // const [data, setData] = useState<weatherModel[]>([])
-    let weather: weatherModel[];
+    let weather: any[];
     const getData = async () => {
-        weather = await GetAllWeather()
+        weather: AxiosResponse<weatherModel[]> = await GetAllWeather()
     }
     useEffect(() => {
         getData()
