@@ -1,5 +1,4 @@
 export interface weatherModel{
-    
     cod: string
     message: string
     cnt:number
@@ -28,4 +27,8 @@ export interface weatherModel{
           speed:number,
      ]
      visibility:string
+}
+
+export interface weatherModelArray{
+   data: weatherModel[]
 }

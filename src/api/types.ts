@@ -3,10 +3,10 @@ import { weatherModel } from  "../app/models/weather"
 
 export interface getWeatherModel{
     
-    cod: string
-    message: string
-    cnt:number
-    list:[
+    cod?: string
+    message?: string
+    cnt?:number
+    list?:[
             temp: number,
             feels_like:number ,
             temp_min: number,
@@ -17,22 +17,23 @@ export interface getWeatherModel{
             humidity: number,
             temp_kf: number,
         ]
-     weather:[
+     weather?:[
         id:string,
         main: string,
         description:string,
         icon: string
      ]
-     clouds:[
+     clouds?:[
         all:number,
 
      ]
-     wind:[
+     wind?:[
           speed:number,
      ]
-     visibility:string
+     visibility?:string
 }
 
-export interface getAllWeather {
-    (data?: getAllWeather): AxiosPromise<weatherModel[]>
-}
+
+// export interface getAllWeather {
+//      ()=>
+// }
