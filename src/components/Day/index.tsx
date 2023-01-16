@@ -6,6 +6,8 @@ import React from "react";
 // import cloudwithrain from "../../assets/cloudwithrain.svg";
 // import wind from "../../assets/wind.svg";
 import "./index.scss";
+// import { ReactComponent as moon } from  "../../assets/icons/moon.svg";
+const moon = require("../../assets/icons/sun.svg") as string;
 
 const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
   return (
@@ -13,7 +15,7 @@ const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
       <div className="date">{date}</div>
 
       <div className="icon-container">
-        <img className="icon" src="" alt="" />
+        <img className="icon" src={moon} alt="" />
         <div className="weather">{weather}</div>
       </div>
 
