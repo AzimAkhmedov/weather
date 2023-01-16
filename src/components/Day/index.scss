@@ -6,12 +6,26 @@
   background-color: var(--background);
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   flex-direction: column;
-  .info{
-    border: 2px solid red;
+  .info {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
     flex-wrap: wrap;
+    .wind {
+      display: flex;
+      align-items: center;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  img {
+    width: 60px;
+    height: 60px;
   }
 }
 .period:hover {

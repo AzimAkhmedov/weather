@@ -5,7 +5,8 @@ export interface dataModel {
    wind: number
    dayTemp: number
    nightTemp: number
-   weather: undefined | string
+   weather: { main: string }
+
 
 }
 // export interface weatherModelArray {
