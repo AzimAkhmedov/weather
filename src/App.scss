@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// colors
+:root {
+  --background: #0a2647;
+  --blue-200: #144272;
+  --blue-300: #205295;
+  --blue-thin: #2c74b3;
+}
+
+body {
+  background: var(--background);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
