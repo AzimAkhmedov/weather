@@ -6,6 +6,6 @@ export interface getWeatherModel {
       temp_min: number
    };
    dt_txt: string
-   weather: { main: string }
+   weather: [{ main: string }]
    wind: { speed: number }
 };

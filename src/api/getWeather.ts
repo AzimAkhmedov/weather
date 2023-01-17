@@ -14,7 +14,7 @@ export const GetAllWeather = async () => {
             wind: e.wind.speed,
             dayTemp: e.main.temp_max,
             nightTemp: e.main.temp_min,
-            weather: e.weather,
+            weather: e.weather[0].main,
         });
     })
 

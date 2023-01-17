@@ -14,8 +14,8 @@ import {
 } from "../../assets/icons/index";
 
 const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
-  const displayIcon = (weather: { main: string }) => {
-    switch (weather.main) {
+  const displayIcon = (weather: string) => {
+    switch (weather) {
       case "Clear":
         return sun;
       case "Clouds":
@@ -36,15 +36,15 @@ const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
         </div>
       </div>
 
-      <div className="time">{time}</div>
+      <div className="time">{time} </div>
       <div className="info">
         <div className="wind">
-          <img src={windIco} alt="" />
-          {wind}
+          
+          Скорость ветра {wind}  <img src={windIco} alt="" />
         </div>
         <div className="temp">
-          Днем:{dayTemp}
-          Ночью:{nightTemp}
+          <p>{dayTemp}</p>
+          <p>{nightTemp}</p>
         </div>
       </div>
     </div>
