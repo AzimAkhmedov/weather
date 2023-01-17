@@ -44,7 +44,6 @@ const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
         </div>
         <div className="temp">
           <p>{dayTemp}</p>
-          <p>{nightTemp}</p>
         </div>
       </div>
     </div>
