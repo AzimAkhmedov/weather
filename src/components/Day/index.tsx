@@ -29,17 +29,14 @@ const Day = ({ date, dayTemp, nightTemp, weather, time, wind }: dataModel) => {
   return (
     <div className="period">
       <div className="date">{date}</div>
-
       <div className="icon-container">
         <div className="weather">
           <img src={displayIcon(weather)} alt="" />
         </div>
       </div>
-
       <div className="time">{time} </div>
       <div className="info">
-        <div className="wind">
-          
+        <div className="wind"> 
           Скорость ветра {wind}  <img src={windIco} alt="" />
         </div>
         <div className="temp">

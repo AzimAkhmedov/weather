@@ -26,7 +26,7 @@ const MainPage = () => {
 
     return (
       <LineChart
-        width={1230}
+        width={window.innerWidth / 1.25}
         height={250}
         data={dataLine}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
