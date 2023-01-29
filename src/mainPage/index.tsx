@@ -13,7 +13,7 @@ import {
 import Day from "../components/Day";
 const MainPage = () => {
   const [data, setData] = useState<dataModel[]>();
-
+  const [loaded, setLoaded] = useState(false);
   const dataLine = [{}];
   const displayChart = () => {
     dataLine.pop();
@@ -44,17 +44,17 @@ const MainPage = () => {
     const res = GetAllWeather();
     res.then((temp) => {
       setData(temp);
+      setLoaded(true);
     });
   }, []);
 
   useEffect(() => {
-    // displayChart();
     console.log(dataLine);
   }, [data]);
   useEffect(() => {
     console.log(data);
   }, [data]);
-  return (
+  return loaded ? (
     <div className="container">
       {data?.map((e: dataModel) => (
         <Day
@@ -68,6 +68,11 @@ const MainPage = () => {
         />
       ))}
       {displayChart()}
+    </div>
+  ) : (
+    <div className="loader">
+      Loading <span>.</span> <span>.</span>
+      <span>.</span>{" "}
     </div>
   );
 };
